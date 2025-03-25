@@ -3,38 +3,28 @@ import { Search, Copy, ChevronDown, Wallet, Building2, QrCode } from 'lucide-rea
 
 // Bank list data with bank codes for transfer to BCA
 const banks = [
-  { "id": "bca", "name": "Bank Central Asia (BCA)", "code": "014" },
-  { "id": "bni", "name": "Bank Negara Indonesia (BNI)", "code": "009" },
-  { "id": "mandiri", "name": "Bank Mandiri", "code": "008" },
-  { "id": "bri", "name": "Bank Rakyat Indonesia (BRI)", "code": "002" },
-  { "id": "cimb", "name": "CIMB Niaga", "code": "022" },
-  { "id": "permata", "name": "Bank Permata", "code": "013" },
-  { "id": "danamon", "name": "Bank Danamon", "code": "011" },
-  { "id": "btn", "name": "Bank BTN", "code": "200" },
-  { "id": "bsi", "name": "Bank Syariah Indonesia", "code": "451" },
-  { "id": "maybank", "name": "Maybank Indonesia", "code": "016" },
-  { "id": "mega", "name": "Bank Mega", "code": "426" },
-  { "id": "bjb", "name": "Bank BJB", "code": "110" },
-  { "id": "jatim", "name": "Bank Jatim", "code": "114" },
-  { "id": "sumut", "name": "Bank Sumut", "code": "117" },
-  { "id": "bukopin", "name": "Bank Bukopin", "code": "441" },
-  { "id": "banten", "name": "Bank Banten", "code": "137" },
-  { "id": "ocbc", "name": "Bank OCBC NISP", "code": "028" },
-  { "id": "hana", "name": "Bank Hana", "code": "484" },
-  { "id": "sinarmas", "name": "Bank Sinarmas", "code": "153" }
+  { id: 'bca', name: 'Bank Central Asia (BCA)', code: '014', info: 'Transfer langsung' },
+  { id: 'bni', name: 'Bank Negara Indonesia (BNI)', code: '009', info: 'Kode Bank: 014' },
+  { id: 'mandiri', name: 'Bank Mandiri', code: '008', info: 'Kode Bank: 014' },
+  { id: 'bri', name: 'Bank Rakyat Indonesia (BRI)', code: '002', info: 'Kode Bank: 014' },
+  { id: 'cimb', name: 'CIMB Niaga', code: '022', info: 'Kode Bank: 014' },
+  { id: 'permata', name: 'Bank Permata', code: '013', info: 'Kode Bank: 014' },
+  { id: 'danamon', name: 'Bank Danamon', code: '011', info: 'Kode Bank: 014' },
+  { id: 'btn', name: 'Bank BTN', code: '200', info: 'Kode Bank: 014' },
+  { id: 'bsi', name: 'Bank Syariah Indonesia', code: '451', info: 'Kode Bank: 014' },
 ];
 
 // E-Wallet data
 const ewallets = [
-  { id: 'dana', name: 'DANA', number: '085176827402' },
-  { id: 'gopay', name: 'GoPay', number: '085176827402' },
-  { id: 'ovo', name: 'OVO', number: '085176827402' },
+  { id: 'dana', name: 'DANA', number: '081234567890' },
+  { id: 'gopay', name: 'GoPay', number: '081234567891' },
+  { id: 'ovo', name: 'OVO', number: '081234567892' },
 ];
 
 // BCA Account details
 const bcaAccount = {
-  number: '0312762755',
-  name: 'Zakya Nurussofa',
+  number: '1234567890',
+  name: 'PT PAYMENT GATEWAY',
 };
 
 function App() {
@@ -184,6 +174,7 @@ function App() {
                   <li>Pilih menu transfer {selectedBank.includes('BCA') ? 'sesama BCA' : 'antar bank'}</li>
                   {!selectedBank.includes('BCA') && (
                     <li>Masukkan kode bank BCA: <span className="font-medium">014</span></li>
+                  )}
                   <li>Masukkan nomor rekening: <span className="font-medium">{bcaAccount.number}</span></li>
                   <li>Masukkan nominal transfer sesuai tagihan</li>
                   <li>Periksa nama penerima: <span className="font-medium">{bcaAccount.name}</span></li>
@@ -218,7 +209,7 @@ function App() {
         {selectedMethod === 'qris' && (
           <div className="text-center">
             <img
-              src="https://i.supa.codes/WCoK5m" // Placeholder QR code image
+              src="https://images.unsplash.com/photo-1672500窶�" // Placeholder QR code image
               alt="QRIS Payment Code"
               className="mx-auto w-64 h-64 object-cover rounded-xl shadow-md"
             />
