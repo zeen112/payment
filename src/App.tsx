@@ -16,15 +16,15 @@ const banks = [
 
 // E-Wallet data
 const ewallets = [
-  { id: 'dana', name: 'DANA', number: '081234567890' },
-  { id: 'gopay', name: 'GoPay', number: '081234567891' },
-  { id: 'ovo', name: 'OVO', number: '081234567892' },
+  { id: 'dana', name: 'DANA', number: '085176827402' },
+  { id: 'gopay', name: 'GoPay', number: '085176827402' },
+  { id: 'ovo', name: 'OVO', number: '085176827402' },
 ];
 
 // BCA Account details
 const bcaAccount = {
-  number: '1234567890',
-  name: 'PT PAYMENT GATEWAY',
+  number: '0312762755',
+  name: 'Zakya Nurussofa',
 };
 
 function App() {
