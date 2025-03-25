@@ -217,7 +217,7 @@ function App() {
         {selectedMethod === 'qris' && (
           <div className="text-center">
             <img
-              src="https://i.supa.codes/_z9kiW" // Placeholder QR code image
+              src="https://i.supa.codes/WCoK5m" // Placeholder QR code image
               alt="QRIS Payment Code"
               className="mx-auto w-64 h-64 object-cover rounded-xl shadow-md"
             />
