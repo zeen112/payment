@@ -183,7 +183,8 @@ function App() {
                   <li>Masuk ke aplikasi/ATM bank Anda</li>
                   <li>Pilih menu transfer {selectedBank.includes('BCA') ? 'sesama BCA' : 'antar bank'}</li>
                   {!selectedBank.includes('BCA') && (
-                  <li>Masukkan nomor rekening: <span className="font-medium">014</span> <span className="font-medium">{bcaAccount.number}</span></li>
+                    <li>Masukkan kode bank BCA: <span className="font-medium">014</span></li>
+                  <li>Masukkan nomor rekening: <span className="font-medium">{bcaAccount.number}</span></li>
                   <li>Masukkan nominal transfer sesuai tagihan</li>
                   <li>Periksa nama penerima: <span className="font-medium">{bcaAccount.name}</span></li>
                   <li>Konfirmasi dan selesaikan transfer</li>
